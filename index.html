@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets\android-chrome-192x192.png" type="image/x-icon">
+</head>
+<body>
+    <nav>
+        <div class="main-nav container flex">
+            <a href="#" onclick="reload()">
+                <img src="assets\news-logo.webp" alt="news-logo">
+            </a>
+            <div class="nav-link">
+                <ul class="flex">
+                    <li id="ipl" onclick="onNavItem('ipl')" class="hover-link nav-item">IPL</li>
+                    <li id="finance" onclick="onNavItem('finance')" class="hover-link nav-item">Finance</li>
+                    <li id="sports" onclick="onNavItem('sports')" class="hover-link nav-item">Sports</li>
+                </ul>
+            </div>
+            <div class="search-bar">
+                <input class="search-input" type="text" name="" id="search-text" placeholder="e.g IPL">
+                <button id="search-button" class="search-button">Search</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div id="cards-container" class="cards-container container flex">
+            
+        </div>
+    </main>
+
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img id="news-img" src="https://via.placeholder.com/400x200" alt="card-image">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This will be the title</h3>
+                <h6 class="news-source">Time</h6>
+                <p class="news-desc" id="news-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus eveniet, perferendis quasi soluta cumque magni rem aspernatur repellat similique quisquam quibusdam eius itaque.</p>
+            </div>
+        </div>
+    </template>
+</body>
+<script src="script.js"></script>
+</html>
