@@ -2,7 +2,7 @@ const API_KEY = "bb1a251843de45a3acb6188059d58228";
 const url = "https://newsapi.org/v2/everything?q=";
 
 window.addEventListener("load", ()=>{
-    fetchNews("India")
+    fetchNews("south korea")
 } );
 
 async function fetchNews(query) {
@@ -23,7 +23,7 @@ function bindData(articles) {
     articles.forEach(article => {
         if(!article.urlToImage) return;
         const cardClone = templateCards.content.cloneNode(true);
-        fillDataIncard(cardClone,article);
+        fillDataIncard(cardClone, article);
         cardContainer.appendChild(cardClone);
     });
 }
@@ -55,9 +55,9 @@ let selectedItem = null;
 function onNavItem(id){
     fetchNews(id);
     const navItem = document.getElementById(id);
-    selectedItem?.classList.remove('active');
+    selectedItem?.classList.remove("active");
     selectedItem = navItem;
-    selectedItem.classList.add('active');
+    selectedItem.classList.add("active");
 }
 
 const searchButton = document.getElementById("search-button");
